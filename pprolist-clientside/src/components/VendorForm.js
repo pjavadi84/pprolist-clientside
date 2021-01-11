@@ -19,6 +19,10 @@ class VendorForm extends Component {
     handleOnSubmit = (event) => {
         event.preventDefault()
         this.props.addVendor(this.state)
+        this.setState({
+            name:'',
+            total_cost: ''
+        })
     }
     
     render() {
