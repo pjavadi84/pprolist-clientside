@@ -1,3 +1,3 @@
-export default function vendorReducer(state={vendors: []}, action){
-    return action.payload
+export default function vendorReducer(state = {vendors: []}, action){
+    return state.vendors
 }

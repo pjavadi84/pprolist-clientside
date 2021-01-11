@@ -1,20 +1,18 @@
 import React from 'react'
 // import logo from './logo.svg';
 import './App.css';
-import { connect } from 'react-redux'
-import {fetchVendors} from './actions/fetchVendors'
+import VendorContainer from './containers/VendorContainer'
 
 class App extends React.Component {
 
   componentDidMount(){
-    this.props.fetchVendors({type: 'FETCH_VENDORS', payload: {name: "Costco"}})
   }
 
   render(){
     return (
       <div className="App">
         <header className="App-header">
-         
+          <VendorContainer />
         </header>
       </div>
     );
@@ -25,4 +23,4 @@ class App extends React.Component {
 
 
 
-export default connect(null, {fetchVendors})(App);
+export default App;
