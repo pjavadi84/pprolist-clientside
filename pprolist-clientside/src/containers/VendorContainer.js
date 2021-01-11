@@ -15,7 +15,7 @@ class VendorContainer extends Component {
             <div>
                VendorContainer:
                 <div className="vendor">
-                    <VendorForm />
+                    <VendorForm /><br></br>
                     <VendorsShow vendors={this.props.vendors} />
                 </div>
             </div>
