@@ -1,17 +1,15 @@
 import React from 'react';
 import Vendor from '../components/Vendor'
-import {Route} from 'react-router-dom'
+import {Route, Link} from 'react-router-dom'
+
 const VendorsShow = (props) => {
 
     return (
         <div>
-            <h1>List of Vendors: </h1>
-            {props.vendors.map(vendor => 
-                <div key={vendor.id}><Vendor vendor={vendor} />
-                    <Route path='/vendors/:id' render={()=> <Vendor /> } />
-                </div>
-                
-            )}
+        {props.vendors.map(vendor =>
+          <li key={vendor.id}>
+            <Link to={`/vendors/${vendor.id}`}>{vendor.name} - ${vendor.total_cost}</Link>
+          </li> )}
         </div>
     ); 
     

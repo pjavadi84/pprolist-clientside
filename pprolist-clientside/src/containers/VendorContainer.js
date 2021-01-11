@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import VendorForm from '../components/VendorForm'
 import VendorsShow from '../components/VendorsShow'
 import {fetchVendors} from '../actions/fetchVendors'
-import {Route} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import Vendor from '../components/Vendor'
 
 
@@ -17,9 +17,11 @@ class VendorContainer extends Component {
             <div>
                VendorContainer:
                 <div className="vendor">
-                    <Route path='/vendors/new' component={VendorForm}/>
-                    <Route path='/vendors/:id' render={(routerProps) => <Vendor {...routerProps} vendors={this.props.vendors} /> } />
-                    <Route exact path='/vendors' render={(routerProps) => <VendorsShow {...routerProps} vendors={this.props.vendors} /> } />
+                    <Switch>
+                        <Route path='/vendors/new' component={VendorForm}/>
+                        <Route path='/vendors/:id' render={(routerProps) => <Vendor {...routerProps} vendors={this.props.vendors} /> } />
+                        <Route exact path='/vendors' render={(routerProps) => <VendorsShow {...routerProps} vendors={this.props.vendors} /> } />
+                    </Switch>  
                 </div>
             </div>
         );
