@@ -7,7 +7,7 @@ import {fetchVendors} from '../actions/fetchVendors'
 
 class VendorContainer extends Component {
     componentDidMount(){
-        fetchVendors()
+        this.props.fetchVendors()
     }
 
     render() {
@@ -16,7 +16,7 @@ class VendorContainer extends Component {
                VendorContainer:
                 <div className="vendor">
                     <VendorForm />
-                    <VendorsShow />
+                    <VendorsShow vendors={this.props.vendors} />
                 </div>
             </div>
         );
@@ -32,5 +32,5 @@ const mapStateToProps = state => {
     }
 }
   
-export default connect(mapStateToProps)(VendorContainer)
+export default connect(mapStateToProps, {fetchVendors})(VendorContainer)
   

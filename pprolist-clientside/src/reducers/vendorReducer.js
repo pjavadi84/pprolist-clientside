@@ -1,3 +1,10 @@
 export default function vendorReducer(state = {vendors: []}, action){
-    return state.vendors
+    
+    switch (action.type) {
+        case 'FETCH_VENDORS':
+            return { vendors: action.payload }
+            // break;
+        default:
+            return state
+    }
 }
