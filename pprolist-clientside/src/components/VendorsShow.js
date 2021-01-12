@@ -1,5 +1,5 @@
 import React from 'react';
-import Vendor from '../components/Vendor'
+// import Vendor from '../components/Vendor'
 import {Route, Link} from 'react-router-dom'
 
 const VendorsShow = (props) => {

@@ -20,7 +20,7 @@ class VendorContainer extends Component {
                     <Switch>
                         <Route path='/vendors/new' component={VendorForm}/>
                         <Route path='/vendors/:id' render={(routerProps) => <Vendor {...routerProps} vendors={this.props.vendors} /> } />
-                        <Route exact path='/vendors' render={(routerProps) => <VendorsShow {...routerProps} vendors={this.props.vendors} /> } />
+                        <Route path='/vendors' render={(routerProps) => <VendorsShow {...routerProps} vendors={this.props.vendors} /> } />
                     </Switch>  
                 </div>
             </div>

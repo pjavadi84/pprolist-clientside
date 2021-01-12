@@ -1,4 +1,5 @@
 import React from 'react'
+import ProductContainer from '../containers/ProductContainer'
 // import {Redirect} from 'react-router-dom'
 
 const Vendor = (props) => {
@@ -7,10 +8,14 @@ const Vendor = (props) => {
 
 
     return (
-        <li>
-            {/* {vendor ? null : <Redirect to='/vendors' />} */}
-            {vendor ? vendor.name : null} - {vendor ? vendor.total_cost : null} 
-        </li>
+        <div>
+            <h1>
+                {vendor ? vendor.name : null} - {vendor ? vendor.total_cost : null} 
+            </h1>
+            
+            <ProductContainer vendor={vendor}/>
+        </div>
+       
     )
 }
 
