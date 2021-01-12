@@ -1,5 +1,5 @@
 export default function vendorReducer(state = {vendors: []}, action){
-    debugger
+    
     switch (action.type) {
         case 'FETCH_VENDORS':
             return { vendors: action.payload }
@@ -7,7 +7,15 @@ export default function vendorReducer(state = {vendors: []}, action){
         case 'ADD_VENDOR':
             return {...state, vendors: [...state.vendors, action.payload]}
         case 'ADD_PRODUCT':
-            return {}
+            let vendors = state.vendors.map(vendor => {
+                if (vendor.id === action.payload.id){
+                    return action.payload
+                } else {
+                    return vendor
+                }
+            })
+            return { ...state, vendors: vendors}
+            
         default:
             return state
     }

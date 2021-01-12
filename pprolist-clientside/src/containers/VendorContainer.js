@@ -15,7 +15,6 @@ class VendorContainer extends Component {
     render() {
         return (
             <div>
-               VendorContainer:
                 <div className="vendor">
                     <Switch>
                         <Route path='/vendors/new' component={VendorForm}/>
