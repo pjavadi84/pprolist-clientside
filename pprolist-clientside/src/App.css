@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.product_name {
+  color: green
+}
+
+#prod_name_header{
+  color: red
+}

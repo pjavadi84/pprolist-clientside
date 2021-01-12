@@ -6,7 +6,7 @@ class ProductContainer extends Component {
     render() {
         return (
             <div>
-                <ProductForm />
+                <ProductForm vendor={this.props.vendor} />
                 <ProductsShow products={ this.props.vendor && this.props.vendor.products} />
             </div>
         );
