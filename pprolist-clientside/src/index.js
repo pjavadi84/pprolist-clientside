@@ -6,7 +6,7 @@ import thunk from 'redux-thunk';
 import { Provider } from 'react-redux'
 import vendorReducer from './reducers/vendorReducer'
 import { BrowserRouter as Router } from 'react-router-dom'
-
+import NavBar from './components/NavBar'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(vendorReducer, composeEnhancers(applyMiddleware(thunk)))
@@ -14,6 +14,7 @@ const store = createStore(vendorReducer, composeEnhancers(applyMiddleware(thunk)
 ReactDOM.render(
   <Provider store={store}>
     <Router>
+      <NavBar />
       <App />
     </Router>
   </Provider>
