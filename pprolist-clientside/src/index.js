@@ -7,6 +7,7 @@ import { Provider } from 'react-redux'
 import vendorReducer from './reducers/vendorReducer'
 import { BrowserRouter as Router } from 'react-router-dom'
 
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(vendorReducer, composeEnhancers(applyMiddleware(thunk)))
 

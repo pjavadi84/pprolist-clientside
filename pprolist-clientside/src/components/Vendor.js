@@ -3,7 +3,6 @@ import ProductContainer from '../containers/ProductContainer'
 // import {Redirect} from 'react-router-dom'
 
 const Vendor = (props) => {
-    console.log(props)
     // let vendor = props.vendors[props.match.params.id - 1]
     let vendor = props.vendors.filter(vendor => vendor.id == props.match.params.id)[0]
 

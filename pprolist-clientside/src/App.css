@@ -44,3 +44,7 @@
 #prod_name_header{
   color: red
 }
+
+.product_info {
+  background-color: gray;
+}
