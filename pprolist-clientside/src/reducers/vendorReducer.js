@@ -20,6 +20,7 @@ export default function vendorReducer(state = {vendors: []}, action){
             return { ...state, vendors: vendors}
         
         case 'DELETE_PRODUCT':
+            debugger
             let selectedProductToDelete = state.vendors.map(vendor => {
                 if (vendor.id === action.payload.id){
                     return action.payload
