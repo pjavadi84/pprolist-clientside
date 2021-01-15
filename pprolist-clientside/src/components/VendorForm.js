@@ -10,6 +10,7 @@ class VendorForm extends Component {
         total_cost: ''
     }
 
+
     handleOnChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value,
@@ -19,6 +20,7 @@ class VendorForm extends Component {
     handleOnSubmit = (event) => {
         event.preventDefault()
         this.props.addVendor(this.state)
+        // this.forceUpdate()
         this.setState({
             name:'',
             total_cost: ''
