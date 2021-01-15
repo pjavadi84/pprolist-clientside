@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import { addVendor} from '../actions/addVendor'
+import { withRouter } from "react-router";
+
 
 class VendorForm extends Component {
 
@@ -23,6 +25,7 @@ class VendorForm extends Component {
             name:'',
             total_cost: ''
         })
+        this.props.history.push('/vendors');
     }
     
     render() {
@@ -42,4 +45,6 @@ class VendorForm extends Component {
     }
 }
 
-export default connect(null,{addVendor})(VendorForm);
+const vendorFormWithRouter = withRouter(VendorForm)
+// export default connect(null,{addVendor})(VendorForm);
+export default connect(vendorFormWithRouter,{addVendor})(VendorForm);

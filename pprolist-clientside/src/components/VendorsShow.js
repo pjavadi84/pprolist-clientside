@@ -8,7 +8,8 @@ const VendorsShow = (props) => {
         <div>
         {props.vendors.map(vendor =>
           <ul key={vendor.id}>
-            <Link to={`/vendors/${vendor.id}`}>{vendor.name} - ${vendor.total_cost}</Link>
+            <Link to={`/vendors/${vendor.id}`}>{vendor.name} 
+            - ${vendor.total_cost}</Link>
           </ul> )}
         </div>
     ); 

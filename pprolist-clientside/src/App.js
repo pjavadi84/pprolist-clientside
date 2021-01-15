@@ -1,6 +1,6 @@
 import React from 'react'
 // import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 import VendorContainer from './containers/VendorContainer'
 // import About from '../src/static/About'
 
