@@ -19,13 +19,9 @@ const VendorsShow = (props) => {
         {props.vendors.map((vendor) =>
           <ul key={vendor.id}>
             <Link to={`/vendors/${vendor.id}`}>{vendor.name} 
-<<<<<<< HEAD
-            - ${vendor.total_cost}</Link>
-=======
               - ${vendor.total_cost}
               - <button onClick={()=> handleDelete(vendor)}>X</button>
             </Link>
->>>>>>> remove-vendor
           </ul> )}
         </div>
     ); 
