@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Pprolist 
+A shopping list tracker helping the user add list of companies the user shops from, add the list of exact product information for each company, adding products that is being discounted, and once the user finishes, he or she can see the total savings and find out which company gives the user the most value for the product they buy. 
+<!-- <!-- This project was bootstrapped with [Create x/// -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## What this app is built on:
 
-## Available Scripts
+This app is built solely on JavaScript, React, and Redux. On the serverside, this project communicates with a Rails api to manage database and calculation logics. 
 
-In the project directory, you can run:
+You can find the link for the backend repo at:
+[https://github.com/pjavadi84/pprolist-serverside]
+### `To start:`
 
-### `yarn start`
+clone the repo and move into project directory
+Once you open the project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+run 'npm install'. It will install node modules and all depedencies. 
+
+on command line, type npm start. The default port should be in any port you want, but it has to be run separate from where your back-end is running on.
+
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
+# `App Structure:`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This app utilized based on static, dynamic components, action creators, and reducers.
 
-### `yarn build`
+### `Stateless component:`
+These components are static or just built for presentational purposes and does not handle their own state:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Navbar
+- ProductsShow
+- Vendor
+- VendorsShow
+- About
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `Stateful class components:`
+This components contains classes and states in which data will flow between actions and reducers to do the manipulation. They are: 
 
-### `yarn eject`
+- ProductForm
+- VendorForm
+- ProductContainer
+- VendorContainer
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Although simple, this project is the first project I have created both utilizing frontend and backend from scratch, built on React, and maintained state by Redux. I project personally gave me a full perspective on what things can be built on the web and how excited I am to share what I have learnt and what I can build for the future as a developer. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Thank you
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
