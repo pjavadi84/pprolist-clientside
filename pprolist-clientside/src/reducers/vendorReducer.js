@@ -9,6 +9,12 @@ export default function vendorReducer(state = {vendors: []}, action){
         case 'ADD_VENDOR':
             return {...state, vendors: [...state.vendors, action.payload]}
         
+        case 'DELETE_VENDOR':
+            let vendorsLeft = state.vendors.filter(vendor =>vendor.id !== action.payload)
+            debugger
+            return { vendors: vendorsLeft }
+           
+        
         case 'ADD_PRODUCT':
             let vendors = state.vendors.map(vendor => {
                 if (vendor.id === action.payload.id){

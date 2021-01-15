@@ -31,7 +31,6 @@ const About = () => {
                     
                     <div>
                     <li><a href="https://github.com/pjavadi84/pprolist-serverside" target="blank">Back-end codebase</a></li>
-
                     </div>
 
                     I hope you enjoy this project as much as I document
