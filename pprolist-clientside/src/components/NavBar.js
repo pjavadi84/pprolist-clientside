@@ -8,9 +8,9 @@ const navComp = (props) => {
     
     return (
         <div>
-            <Navbar bg="light" expand="lg">
-                <Link to="/vendors">Home</Link><br></br>
-                <Link to="/vendors/new">New Vendor</Link><br></br>
+            <Navbar className="navbar navbar-expand-lg navbar-light bg-light" >
+                <Link to="/vendors">Home</Link>
+                <Link to="/vendors/new">New Vendor</Link>
                 <Link to="/About">About</Link>
             </Navbar>
         </div>

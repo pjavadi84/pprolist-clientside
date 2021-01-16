@@ -13,16 +13,15 @@
   }
 }
 
-/* .App-header {
-  background-color: #b1bdd4;
+.App-header {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-} */
+  
+}
 
 .App-link {
   color: #61dafb;
@@ -48,3 +47,14 @@
 .product_info {
   background-color: gray;
 }
+
+/* .vendor-show-div {
+    background-color: green;
+    display: block !important;
+    height: 100% !important;
+    left: 0px !important;
+    position: absolute !important;
+    top: 0px !important;
+    width: 100% !important;
+    border-radius: 12px !important;
+} */

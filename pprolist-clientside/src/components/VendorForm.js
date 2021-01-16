@@ -27,7 +27,7 @@ class VendorForm extends Component {
             name:'',
             total_cost: ''
         })
-        this.props.history.push('/vendors');
+        // this.props.history.push('/vendors');
     }
     
     render() {

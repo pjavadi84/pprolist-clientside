@@ -13,7 +13,7 @@ const Vendor = (props) => {
                 {vendor ? vendor.name : null}  
             </h1>
             <h3>Total cost: {vendor ? vendor.total_cost : null} </h3>
-            
+           
             <ProductContainer vendor={vendor}/>
         </div>
        

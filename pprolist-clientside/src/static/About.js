@@ -20,7 +20,7 @@ const About = () => {
                 and Redux to track and manage states in different part of this app, and
                 using Ruby on Rails as a backend api to handle storage and database
                 management. 
-
+                </p>
                 <div>
                     You can visit my repos mentioned below to explore codebase and provide feedback 
                     should there be an opportunity to pull request to make this app works better:
@@ -33,13 +33,13 @@ const About = () => {
                     <li><a href="https://github.com/pjavadi84/pprolist-serverside" target="blank">Back-end codebase</a></li>
                     </div>
 
-                    I hope you enjoy this project as much as I document
+                    I hope you enjoy this project as much as I do
 
                     Good vibes!
 
                     Pouya 
                 </div>
-            </p>
+            
         </div>
     )
 }
