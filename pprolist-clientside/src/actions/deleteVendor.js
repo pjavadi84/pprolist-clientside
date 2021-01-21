@@ -1,6 +1,3 @@
-
-
-
 export const deleteVendor = (vendorId) => {
 
 	// return (dispatch) => {

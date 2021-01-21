@@ -22,12 +22,10 @@ class VendorForm extends Component {
     handleOnSubmit = (event) => {
         event.preventDefault()
         this.props.addVendor(this.state)
-        // this.forceUpdate()
         this.setState({
             name:'',
             total_cost: ''
         })
-        // this.props.history.push('/vendors');
     }
     
     render() {
@@ -48,5 +46,5 @@ class VendorForm extends Component {
 }
 
 const vendorFormWithRouter = withRouter(VendorForm)
-// export default connect(null,{addVendor})(VendorForm);
+
 export default connect(vendorFormWithRouter,{addVendor})(VendorForm);

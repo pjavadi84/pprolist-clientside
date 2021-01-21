@@ -11,7 +11,6 @@ export default function vendorReducer(state = {vendors: []}, action){
         
         case 'DELETE_VENDOR':
             let vendorsLeft = state.vendors.filter(vendor =>vendor.id !== action.payload)
-            debugger
             return { vendors: vendorsLeft }
            
         
