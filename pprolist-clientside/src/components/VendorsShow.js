@@ -15,12 +15,12 @@ const VendorsShow = (props) => {
   const [counts, setCounts] = useState({}); // <-- initial empty object for counts
   
   // similar to componentDidMount:
-  useEffect(() => {
-    document.title = `You clicked ${Object.values(counts).reduce(
-      (total, { count }) => total + count,
-      0
-    )} times`;
-  });
+  // useEffect(() => {
+  //   document.title = `You clicked ${Object.values(counts).reduce(
+  //     (total, { count }) => total + count,
+  //     0
+  //   )} times`;
+  // });
 
   // initialize/update state when vendors array changes
   useEffect(() => {
@@ -34,11 +34,12 @@ const VendorsShow = (props) => {
       )
     );
   }, [props.vendors]);
-
+    
   const handleCount = (id) => () =>
     setCounts((counts) => ({
       ...counts,
       [id]: counts[id] + 1 // <-- update specific vendor's count
+    
     }));
 
   
