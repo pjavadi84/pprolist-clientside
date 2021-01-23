@@ -2,7 +2,10 @@ import React from 'react'
 import ProductContainer from '../containers/ProductContainer'
 // import {Redirect} from 'react-router-dom'
 
+
+
 const Vendor = (props) => {
+    
     // debugger
     let vendor = props.vendors.filter(v => v.id == props.match.params.id)[0]
     

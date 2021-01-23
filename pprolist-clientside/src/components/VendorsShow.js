@@ -13,28 +13,24 @@ const VendorsShow = (props) => {
   };
 
   const [counts, setCounts] = useState({}); // <-- initial empty object for counts
-  
-  // similar to componentDidMount:
-  // useEffect(() => {
-  //   document.title = `You clicked ${Object.values(counts).reduce(
-  //     (total, { count }) => total + count,
-  //     0
-  //   )} times`;
-  // });
+ 
 
-  // initialize/update state when vendors array changes
+  // initialize/update state when vendors array changes. This is similar to lifecycle events such as componentDidMount
   useEffect(() => {
     setCounts(
-      props.vendors.reduce(
-        (counts, { id }) => ({
-          ...counts,
-          [id]: 0 // <-- store counts by vendor id
+      props.vendors.reduce((counts, { id }) => ({...counts,[id]: 0 // <-- store counts by vendor id
         }),
         {}
       )
     );
   }, [props.vendors]);
-    
+  
+
+  // this handleCount function run setCounts to update the id. 
+  // I passed the spread operator to copy the value of counts and add 
+  // to the id. useEffect updates whateer inside the object on re-render
+  // works like componentDidMount
+  
   const handleCount = (id) => () =>
     setCounts((counts) => ({
       ...counts,
