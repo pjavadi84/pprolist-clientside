@@ -7,11 +7,14 @@ import { deleteVendor } from '../actions/deleteVendor'
 import { Route, Switch } from 'react-router-dom'
 import Vendor from '../components/Vendor'
 import About from '../static/About'
+import FoundVendor from '../components/FoundVendor';
+// import FoundVendor from '../components/FoundVendor';
 
 // import NavBar from '../components/NavBar'
 
 
 class VendorContainer extends Component {
+
     componentDidMount() {
         this.props.fetchVendors();
     }
@@ -19,19 +22,23 @@ class VendorContainer extends Component {
     render() {
         return (
             <div>
+                
+                <br></br>
                 <div className="vendor">
-
                     <Switch>
                         <Route path='/vendors/new' component={VendorForm} />
                         <Route path='/vendors/:id' render={(routerProps) => <Vendor {...routerProps} vendors={this.props.vendors} />} />
+                        {/* <Route path='/vendors/find' render={(routerProps) => <FoundVendor {...routerProps} vendors={this.props.vendors} />} /> */}
                         <Route path='/vendors' render={(routerProps) => {
                             return this.props.vendors && this.props.vendors.length ?
-                            <VendorsShow {...routerProps} vendors={this.props.vendors} deleteVendor={this.props.deleteVendor} />
+                            <VendorsShow {...routerProps} vendors={this.props.vendors} deleteVendor={this.props.deleteVendor} render={()=><FoundVendor />} />
                             : <VendorForm  {...routerProps} addVendor = { this.props.addVendor } />
                         }} />
                         <Route path='/About' component={About} />
                     </Switch>
                 </div>
+
+                
             </div>
         );
     }
@@ -39,7 +46,10 @@ class VendorContainer extends Component {
 
 }
 
-// To see things
+// To see things: pretty much to make a copy of the state and pass to props for components that needs it
+// connect helps those attributes that used in this component such as fetchBendors and deleteVendors to pass 
+// these props and use them to send to action creators, for example, which can later dispatch an action type with
+// props as payload to reducer. Reducer then listen to those actions and make updates to the state
 const mapStateToProps = state => {
     return {
         vendors: state.vendors

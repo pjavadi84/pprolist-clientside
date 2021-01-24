@@ -5,8 +5,8 @@ import ProductContainer from '../containers/ProductContainer'
 
 
 const Vendor = (props) => {
+    console.log(props)
     
-    // debugger
     let vendor = props.vendors.filter(v => v.id == props.match.params.id)[0]
     
 

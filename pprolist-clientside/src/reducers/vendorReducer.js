@@ -1,14 +1,16 @@
 export default function vendorReducer(state = {vendors: []}, action){
-    
+    console.log(action)
     switch (action.type) {
         
         case 'FETCH_VENDORS':
             return { vendors: action.payload }
             // break;
+
         
         case 'ADD_VENDOR':
+            debugger
             return {...state, vendors: [...state.vendors, action.payload]}
-        
+            
         case 'DELETE_VENDOR':
             let vendorsLeft = state.vendors.filter(vendor =>vendor.id !== action.payload)
             return { vendors: vendorsLeft }
