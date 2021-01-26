@@ -9,10 +9,13 @@ const navComp = (props) => {
     return (
         <div>
             <Navbar className="navbar navbar-expand-lg navbar-light bg-light" >
-                <Link to="/vendors">All vendors</Link><br></br>
-                <Link to="/vendors/new">New Vendor</Link><br></br>
-                <Link to="/About">About</Link><br></br>
-                {/* <Link to="/vendors/find">Search vendors!</Link> */}
+                <div>
+                    <li><Link to="/vendors">All vendors</Link></li>
+                    <li><Link to="/vendors/new">New Vendor</Link></li>
+                    <li><Link to="/About">About</Link></li>
+                    <li><Link to="/vendors/find">Search</Link></li>
+                </div>
+                
             </Navbar>
         </div>
     )

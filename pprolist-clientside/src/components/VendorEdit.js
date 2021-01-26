@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {Card, Button, Form} from 'react-bootstrap'
 import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import editVendor from '../actions/editVendor'
 
 class VendorEdit extends Component {
 

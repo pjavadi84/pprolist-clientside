@@ -7,14 +7,21 @@ const FoundVendor = (props) => {
     const [searchTerm, setSearchTerm] = useState("");
     const [searchResults, setSearchResults] = useState([]);
     
+    // debugger
+
     const handleChange = event => {
         setSearchTerm(event.target.value)
     }
 
     useEffect(() => {
-        
-        const results = props.vendor.vendors.filter(vendor =>
-            vendor.name === searchTerm
+        const results = props.vendor.filter(vendor =>
+            {if(vendor.name.includes(searchTerm) ){
+                return searchTerm
+            }
+        }
+            
+            
+            // vendor.name.includes(searchTerm)
         );
         
         if(results){
@@ -25,7 +32,7 @@ const FoundVendor = (props) => {
         
         
         
-        }, [searchTerm, props.vendor.vendors]
+        }, [searchTerm, props.vendor]
       );
 
     return (
@@ -35,7 +42,10 @@ const FoundVendor = (props) => {
             <input type="text" placeholder="Search" value={searchTerm} onChange={handleChange}/>
             <br></br>
             {searchResults.map(vendor => (
-                <Link to={`/vendors/${vendor.id}`}>{vendor.name}</Link>
+                <div>
+                    <li><Link to={`/vendors/${vendor.id}`}>{vendor.name}</Link></li>
+                </div>
+
             ))}
             <br></br><br></br>
         </div>
