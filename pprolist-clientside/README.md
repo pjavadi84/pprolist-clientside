@@ -1,7 +1,7 @@
 # Pprolist 
 A shopping list tracker helping the user add list of companies the user shops from, add the list of exact product information for each company, adding products that is being discounted, and once the user finishes, he or she can see the total savings and find out which company gives the user the most value for the product they buy. 
 <!-- <!-- This project was bootstrapped with [Create x/// -->
-Please check my blog by clicking <a  href="https://pouya-javadi-resume.medium.com/pprolist-cost-calculation-app-presented-to-you-by-reactjs-powered-by-rails-4ed6ac74eb1a" target="_blank">Here</link>
+Please check my blog by clicking <a  href="https://pouya-javadi-resume.medium.com/pprolist-cost-calculation-app-presented-to-you-by-reactjs-powered-by-rails-4ed6ac74eb1a" target="_blank" rel="noreferrer noopener">Here</link>
 ## What this app is built on:
 
 This app is built solely on JavaScript, React, and Redux. On the serverside, this project communicates with a Rails api to manage database and calculation logics. 
